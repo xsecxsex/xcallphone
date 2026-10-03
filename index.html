@@ -745,7 +745,7 @@
 
   /* --- VF-Cash system notification --- */
   var sysNotif=$("sysNotif"), notifBody=$("notifBody");
-  var vfBalance = ....;
+  var vfBalance = 0.00;
   var notifTimer=null;
 
   function showVfCashNotif(num, amt){
@@ -755,7 +755,9 @@
     notifBody.textContent =
       "تم تحويل " + amt + " جنيه لرقم " + num + "\n" +
       "مصاريف الخدمة 1.0 جنيه\n" +
-      "....." + balTxt + " جنيه\n" +
+      "رصيد حسابك في فودافون كاش الحالي " + balTxt + " جنيه\n" +
+      "تقدر تسحب من محفظتك برسوم 5 جنيه بس لحد النهاردة!\n" +
+      "كلم *9999# واشترك عشان تسحب لحد 5000 جنيه شهريًا برسوم ثابتة وأوفر لكل عملياتك\n" +
       "http://vf.eg/vfcash";
     sysNotif.classList.add("on");
     clearTimeout(notifTimer);
